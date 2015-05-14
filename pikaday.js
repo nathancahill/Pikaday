@@ -637,9 +637,7 @@
                 this.setMinDate(opts.minDate);
             }
             if (opts.maxDate) {
-                setToStartOfDay(opts.maxDate);
-                opts.maxYear  = opts.maxDate.getFullYear();
-                opts.maxMonth = opts.maxDate.getMonth();
+                this.setMaxDate(opts.maxDate);
             }
 
             if (isArray(opts.yearRange)) {
@@ -834,7 +832,10 @@
          */
         setMaxDate: function(value)
         {
-            this._o.maxDate = value;
+            setToStartOfDay(value);
+            this._o.maxDate  = value;
+            this._o.maxYear  = value.getFullYear();
+            this._o.maxMonth = value.getMonth();
         },
 
         setStartRange: function(value)
