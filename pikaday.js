@@ -542,6 +542,7 @@
         addEvent(self.el, 'ontouchend' in document ? 'touchend' : 'mousedown', self._onMouseDown, true);
         addEvent(self.el, 'change', self._onChange);
         addEvent(self.el, 'click', self._captureEvent);
+        addEvent(self.el, 'touchend', self._captureEvent);
 
         if (opts.field) {
             if (opts.container) {
@@ -1032,6 +1033,7 @@
             removeEvent(this.el, 'mousedown', this._onMouseDown, true);
             removeEvent(this.el, 'change', this._onChange);
             removeEvent(this.el, 'click', this._captureEvent);
+            removeEvent(this.el, 'touchend', this._captureEvent);
             if (this._o.field) {
                 removeEvent(this._o.field, 'change', this._onInputChange);
                 if (this._o.bound) {
