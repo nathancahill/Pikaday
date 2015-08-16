@@ -844,6 +844,7 @@
             this._o.maxDate  = value;
             this._o.maxYear  = value.getFullYear();
             this._o.maxMonth = value.getMonth();
+<<<<<<< HEAD
         },
 
         setStartRange: function(value)
@@ -854,6 +855,8 @@
         setEndRange: function(value)
         {
             this._o.endRange = value;
+=======
+>>>>>>> 855ab0f45b743d25a41b20ee2871417060b02865
         },
 
         /**
